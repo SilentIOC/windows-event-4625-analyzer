@@ -1,0 +1,29 @@
+<Events>
+  <Event>
+    <System>
+      <EventID>4625</EventID>
+      <TimeCreated SystemTime="2026-01-03T21:57:08.356035Z"/>
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">administrator</Data>
+      <Data Name="IpAddress">192.168.1.100</Data>
+      <Data Name="LogonType">3</Data>
+      <Data Name="Status">0xc000006d</Data>
+      <Data Name="SubStatus">0xc0000064</Data>
+    </EventData>
+  </Event>
+
+  <Event>
+    <System>
+      <EventID>4625</EventID>
+      <TimeCreated SystemTime="2026-01-03T21:58:10.454395Z"/>
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">guest</Data>
+      <Data Name="IpAddress">10.0.0.23</Data>
+      <Data Name="LogonType">10</Data>
+      <Data Name="Status">0xc000006d</Data>
+      <Data Name="SubStatus">0xc000006a</Data>
+    </EventData>
+  </Event>
+</Events>
