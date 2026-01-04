@@ -30,33 +30,47 @@ The script extracted:
 
 ## Key Findings
 - Total failed logon events detected: **3**
-- Primary source IP: **127.0.0.1**
-- Logon type observed: **Type 2 (Interactive)**
-- Status code: **0xc000006d**
-- SubStatus code: **0xc0000380**
+- Primary source IP: *
+# Windows Event ID 4625 – Failed Logon Analyzer (SOC Lab)
 
-## Security Interpretation
-The repeated failed logon attempts indicate unsuccessful authentication activity.  
-While the source IP suggests local testing, similar patterns in production environments may indicate:
-- Password guessing
-- Brute-force attempts
-- Misconfigured services
+## 📌 Overview
+This project demonstrates hands-on Security Operations Center (SOC) log analysis by detecting and analyzing **Windows Event ID 4625 (Failed Logon Attempts)** using Python.  
+The goal is to simulate real-world SOC workflows such as log parsing, IOC extraction, and reporting.
 
-## Outcome
-This lab demonstrates the ability to:
-- Parse Windows security logs
-- Detect authentication failures
-- Translate raw log data into actionable SOC insights
-- Document findings in a professional incident-style report
+This lab aligns with **SOC Analyst Tier 1 responsibilities**, including:
+- Authentication failure analysis
+- Brute-force detection logic
+- Incident triage and reporting
 
-## Next Steps
-- Add support for additional Event IDs
-- Export results to CSV
-- Correlate failed and successful logon events
-# Windows Event ID 4625 Analyzer
+---
 
-Week 1 SOC Lab  
-Author: Julio Betancourt
+## 🛠️ Tools & Technologies
+- Python 3
+- Windows Security Event Logs (XML)
+- Linux (Kali)
+- Git & GitHub
+- Command-line log analysis
 
-This project analyzes Windows Security Event ID 4625 (failed logon attempts)
-and summarizes attack indicators for SOC analysis.
+---
+
+## 🔍 What the Script Does
+The Python analyzer:
+- Parses Windows Security logs (XML)
+- Detects Event ID **4625**
+- Extracts:
+  - Target usernames
+  - Source IP addresses
+  - Logon types
+  - Status & substatus codes
+- Produces a summarized SOC-style report
+
+---
+
+## 📂 Repository Structure
+
+---
+
+## ▶️ How to Run
+```bash
+python3 win4625_analyzer.py
+cat win4625_report.txt
